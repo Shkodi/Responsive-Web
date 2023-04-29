@@ -1,0 +1,80 @@
+@media screen and (min-width: 600px) {
+    .service-cards,
+    .service-skills,
+    .stats .container,
+    .portfolio-links,
+    .team-cards {
+        grid-template: repeat(2, auto) / repeat(2, auto);
+    }
+    .portfolio-images {
+        grid-template: repeat(3, auto) / repeat(2, auto);
+    }
+}
+@media screen and (min-width: 900px) {
+    .portfolio-links {
+        max-width: 900px;
+        grid-template: auto / repeat(4, auto);
+    }
+    .portfolio-images {
+        grid-template: repeat(2, auto) / repeat(3, auto);
+    }
+    .testimonial .container {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+    .testimonial-text {
+        aspect-ratio: 3 / 2;
+        grid-row: 1 / span 2;
+        overflow-y: auto;
+    }
+    .testimonial-text::-webkit-scrollbar {
+        width: 0;
+    }
+    .testimonial-img {
+        grid-row: 2 / span 2;
+    }
+    footer .container {
+        grid-template: auto / 1fr 8em 1fr;
+        align-items: flex-start;
+        gap: 4em;
+    }
+    footer .container * {
+        text-align: start;
+    }
+    .footer-about {
+        padding-top: 1em;
+    }
+    .footer-contact-icons {
+        justify-content: flex-start;
+    }
+}
+@media screen and (min-width: 1200px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .service-cards,
+    .service-skills,
+    .stats .container,
+    .team-cards {
+        grid-template: auto / repeat(4, auto);
+    }
+    .portfolio .container {
+        max-width: none;
+        width: 100%;
+    }
+    .portfolio-intro,
+    .portfolio-links {
+        width: 90%;
+        max-width: 1200px;
+    }
+    .portfolio-links {
+        grid-template: auto / repeat(5, auto);
+    }
+    .portfolio-link-img {
+        display: inline;
+        justify-self: center;
+    }
+    .portfolio-images {
+        grid-template: auto / repeat(6, auto);
+    }
+}
