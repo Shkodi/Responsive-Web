@@ -44,10 +44,11 @@
         gap: 4em;
     }
     footer .container * {
-        text-align: start;
+        text-align: left;
     }
-    .footer-about {
-        padding-top: 1em;
+    .footer-contact-link button {
+        padding: 1em 5em;
+        font-size: 1rem;
     }
     .footer-contact-icons {
         justify-content: flex-start;
@@ -92,5 +93,6 @@
     }
     .portfolio-images {
         grid-template: auto / repeat(6, auto);
+        gap: 0;
     }
 }

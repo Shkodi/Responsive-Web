@@ -272,7 +272,17 @@ nav li:hover {
     display: grid;
     grid-template: repeat(6, auto) / auto;
     justify-content: center;
+    gap: 1em;
     margin: 1.5em 0;
+}
+.portfolio-img-container {
+    overflow: hidden;
+}
+.portfolio-img-container img {
+    transition: 0.4s;
+}
+.portfolio-img-container img:hover {
+    transform: scale(1.2);
 }
 .portfolio-button-container button:hover {
     color: var(--darkgray);
