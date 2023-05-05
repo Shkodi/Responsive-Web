@@ -17,6 +17,8 @@
 }
 html {
     font-size: 14px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5em;
 }
 .container {
     max-width: 1200px;
@@ -81,7 +83,7 @@ h1, h2 {
     text-transform: uppercase;
 }
 h1, h2, h3 {
-    letter-spacing: .5em;
+    letter-spacing: .3em;
     line-height: 1.5;
     padding: 1em 0;
 }
@@ -109,16 +111,12 @@ header {
     top: 0;
     z-index: 10;
     width: 100%;
-    background-image: linear-gradient(rgba(15,15,15,.95), rgba(15,15,15,.95));
+    background-color: var(--darkgray);
 }
 header .container {
     flex-direction: row;
     justify-content: space-between;
     padding: 2em 0;
-}
-header i {
-    color: var(--yellow);
-    font-size: 3rem;
 }
 .header-company {
     display: flex;
@@ -132,23 +130,36 @@ header i {
     text-transform: capitalize;
     color: var(--white);
 }
-nav {
-    position: fixed;
-    right: 0;
-    z-index: 11;
-    width: 30%;
-    height: 100vh;
-    background-color: var(--darkgray);
-}
-nav i {
-    font-size: 3rem;
+header .container i {
+    cursor: pointer;
+    display: flex;
+    font-size: 2.5rem;
     color: var(--yellow);
+}
+nav {
+    display: none;
+    position: absolute;
+    top: 6em;
+    right: 0;
+    width: 80%;
+    height: calc(100vh - 6em);
+    background-color: var(--darkgray);
 }
 nav ul {
     display: flex;
+    align-items: center;
     flex-direction: column;
+    font-size: 1.5rem;
+    margin-top: 2em;
     color: var(--white);
-    font-size: 1.2rem;
+}
+nav li {
+    padding: 0;
+    margin: .5em;
+    border-bottom: 2px solid transparent;
+}
+nav li:hover {
+    border-bottom: 2px solid var(--yellow);
 }
 
 /************** Home Section **************/

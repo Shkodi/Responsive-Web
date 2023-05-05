@@ -11,6 +11,12 @@
     }
 }
 @media screen and (min-width: 900px) {
+    html {
+        font-size: 16px;
+    }
+    nav {
+        width: 50%;
+    }
     .portfolio-links {
         max-width: 900px;
         grid-template: auto / repeat(4, auto);
@@ -48,9 +54,19 @@
     }
 }
 @media screen and (min-width: 1200px) {
-    header .container {
+    header .container i {
+        display: none;
+    }
+    nav {
+        display: flex;
+        position: static;
+        width: auto;
+        height: auto;
+    }
+    nav ul {
         flex-direction: row;
-        justify-content: space-between;
+        font-size: 1.2rem;
+        margin: 0;
     }
     .service-cards,
     .service-skills,
